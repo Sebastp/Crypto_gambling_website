@@ -1,0 +1,59 @@
+@import "utilities/variables";
+@import "../vendor/typography";
+
+.neutralize-btn{
+  background: none;
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+}
+
+
+
+.btn__0{
+  @extend .neutralize-btn;
+  background: $main-flag;
+  color: #fff;
+  border-radius: 1000px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $f1;
+  font-weight: $medium;
+  padding: 7px 54px 6px 54px;
+  box-shadow: 1px 5px 13px 0px rgba(0, 0, 0, 0.15);
+}
+
+.btn__0-light{
+  @extend .btn__0;
+  background: #fff;
+  color: $main-flag;
+  padding: 8px 48px 7px 48px;
+}
+
+.btn__1{
+  @extend .neutralize-btn;
+  background: none;
+  color: $main-flag;
+  font-size: 18px;
+  font-family: $f1;
+  font-weight: $medium;
+}
+
+.btn__2{
+  @extend .neutralize-btn;
+  background: $main-flag;
+  color: #fff;
+  font-size: 14px;
+  font-family: $f1;
+  font-weight: $medium;
+  border-radius: 2px;
+  padding: 7px 24px 6px 24px;
+}
+
+
+.btn-rounded{
+  @extend .brdr;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 1000px;
+}

@@ -1,0 +1,323 @@
+@import "../utilities/variables";
+
+
+#sect-landing{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+
+  #sect-landing-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    #landing-top{
+      z-index: 10;
+    }
+
+    #landing-content{
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      #landing-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 45%;
+        max-width: 45%;
+        padding-bottom: 28px;
+        padding-right: 24px;
+
+        #landing-usr{
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 18px;
+
+          .landing-cta{
+            transition: color 0.2s;
+            &:hover{
+              transition: color 0.2s;
+              color: $grey-mono_-4;
+            }
+          }
+
+          #landing-usr-labeltop{
+            width: 100%;
+            #landing-usr__bets{
+              display: inline-block;
+              float: right;
+              span{
+                margin-right: 4px;
+              }
+            }
+          }
+
+          #landing-usr-nick{
+            width: 100%;
+            margin-top: 2px;
+
+            .f1_anach_0{
+              font-size: 18px;
+            }
+
+            #landing-nick-action{
+              cursor: pointer;
+              margin-left: 4px;
+            }
+
+            #landing-nick-edit{
+              display: none;
+              width: 100%;
+              #landing-nick__inpt{
+                width: 100%;
+                margin-bottom: 3px;
+              }
+            }
+          }
+
+          #landing-usr__setpsw{
+            margin-top: 2px;
+            display: block;
+            font-size: 15px;
+          }
+
+          #landing-usr__url{
+            width: 100%;
+            display: block;
+            margin-top: 16px;
+            #landing-url{
+              display: inline-block;
+              margin-right: 4px;
+              #landing-usr__urlcontent{
+                margin-left: 8px;
+                word-break: break-all;
+                color: $grey-mono_-55;
+              }
+            }
+
+            #landing-url__show{
+              cursor: pointer;
+              display: inline-block;
+            }
+
+            :last-child{
+              margin-top: 4px;
+            }
+          }
+        }
+
+        #landing-left-divline{
+          height: 1px;
+          width: 100%;
+          background-color: $grey-mono_-1;
+          // margin: 40px auto;
+        }
+
+        #landing-left-balance{
+          margin-top: 16px;
+          #landing-usrBalance{
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            span{
+              font-size: 16px;
+              margin-right: 2px;
+            }
+          }
+
+          #landing-balance-btns{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0 16px 0;
+
+            a{
+              flex: 1;
+            }
+            .btn__0{
+              padding: 7px 0 6px 0;
+              width: 100%;
+            }
+
+            span{
+              min-width: 35px;
+            }
+          }
+        }
+      }
+
+      #landing-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        position: relative;
+        padding-left: 36px;
+        top: 0;
+        left: 0;
+        margin: 0;
+
+        *{
+          z-index: 1;
+          position: relative;
+        }
+
+        #landing-right-stats{
+          padding-bottom: 15%;
+          width: 100%;
+          #landing-betsAll{
+            margin-bottom: 12px;
+          }
+
+          #landing-won24{
+            margin-bottom: 12px;
+          }
+
+          #landing-usrOnline{
+            .users__active-info{
+              font-size: 16px;
+            }
+          }
+        }
+
+        #landing-right-bottom{
+          text-align: center;
+          padding-bottom: 28px;
+          #lrb-label{
+            display: block;
+            margin-bottom: 9px;
+          }
+        }
+
+        #landing-right-bckg{
+          z-index: 0;
+          position: absolute;
+          height: calc(100% + 80px);
+          width: 53vw;
+          min-width: 330px;
+          top: -80px;
+          left: 0;
+          margin: 0;
+          background: linear-gradient(45deg, rgba(61,79,218,1) 7%, rgba(59,147,227,1) 93%);
+          overflow: hidden;
+          .landing-right-shapes{
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0.25;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#sect-game__showcase{
+  padding: 30px 0 35px 0;
+  .sect-top{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    .sect-top-title{
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 2px;
+    }
+
+    .sect-top-desc{
+      display: inline-block;
+      font-size: 17px;
+    }
+
+    .sect-arrow{
+      display: inline-block;
+      position: absolute;
+      right: 25px;
+      top: 0;
+      opacity: 0.4;
+      transition: opacity 0.2s;
+      cursor: pointer;
+      z-index: 10;
+
+      svg{
+        width: 16px;
+        height: auto;
+        transform: rotate(-90deg);
+      }
+
+      &:hover{
+        opacity: 0.6;
+        transition: opacity 0.4s;
+      }
+    }
+  }
+
+
+  #sect-game-chart{
+    width: 100%;
+    display: block;
+
+    .chart-axis__y-labels, .chart-a__y-rounds, #gameLine-currPrice{
+      display: none;
+    }
+  }
+
+  .sect-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+
+    .game__showcase-mid{
+      // position: absolute;
+      left: 0;
+      right: 0;
+
+      .showcase-action{
+        display: inline-block;
+        border-radius: 1000px;
+      }
+    }
+
+    .sect-bottom__left{
+      display: inline-block;
+      flex-basis: 50%;
+    }
+
+    .sect-bottom__right{
+      display: inline-block;
+      flex-basis: 50%;
+      text-align: right;
+
+      #game__showcase-wonweek{
+        span{
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+
+#sect-bets{
+  margin-right: 26px;
+  flex: 1;
+}
+
+#sect-leaders{
+  flex-basis: 43%;
+}

@@ -1,0 +1,108 @@
+@import "../utilities/variables";
+
+@media only screen and (max-width: 760px) {
+  .topbar-full{
+    .topbar-nav-li{
+      opacity: 0.8 !important;
+      transition: color 0.17s;
+      color: $grey-mono_-4 !important;
+      line-height: 45px !important;
+      margin-right: 6px !important;
+
+      &:hover{
+        transition: color 0.2s;
+        color: $grey-mono_-6 !important;
+      }
+    }
+
+    .nav__active{
+      .topbar-nav-li{
+        font-weight: $medium;
+        color: $grey-mono_-9 !important;
+        transition: opacity 0.25s;
+        opacity: 1 !important;
+      }
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  .topbar{
+    .topbar-rightcont{
+      nav{
+        position: relative;
+
+        .topbar-nav-icon{
+          display: inline-block !important;
+        }
+
+        .topbar-nav{
+          position: absolute;
+          left: -100%;
+          transform: translateX(-50%);
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          top: 50px;
+          background-color: #fff;
+          border: 1px solid $grey-mono_2;
+          height: auto;
+          padding: 6px 21px;
+          display: none;
+          li{
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .topbar-full{
+    height: 65px;
+    .topbar-rightcont{
+      nav{
+        position: relative;
+
+        .topbar-nav-icon{
+          display: inline-block !important;
+        }
+
+        .topbar-nav{
+          position: absolute;
+          right: 0;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          top: 40px;
+          background-color: #fff;
+          border: 1px solid $grey-mono_2;
+          height: auto;
+          padding: 6px 21px;
+          li{
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .topbar{
+    height: 50px;
+  }
+
+  .topbar-usersect, #topbar-user{
+    float: right;
+  }
+
+  .topbar-brand-cont{
+    .topbar-logo__text{
+      font-size: 21px;
+    }
+  }
+}

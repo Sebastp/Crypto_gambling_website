@@ -1,0 +1,27 @@
+@import "../utilities/variables";
+
+.error-page{
+  flex: 1;
+  background-color: #fff;
+  border-bottom: 1px solid #ededf2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .error-inner{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-height: 330px;
+    max-height: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    #error-subtitle{
+      margin-top: 16px;
+    }
+  }
+}

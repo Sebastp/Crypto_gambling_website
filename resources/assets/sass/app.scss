@@ -1,0 +1,38 @@
+// Variables
+@import "utilities/variables";
+
+// Bootstrap
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+@import "vendor/normalize";
+@import "vendor/typography";
+
+// partials
+@import "partials/buttons";
+@import "partials/inputs";
+@import "partials/modals";
+@import "partials/chart";
+
+
+//pages
+@import "sections/topbar.scss";
+@import "sections/main.scss";
+@import "sections/home.scss";
+@import "sections/profile.scss";
+@import "sections/login.scss";
+@import "sections/game.scss";
+@import "sections/footer.scss";
+@import "sections/errors.scss";
+
+
+
+//responsive
+@import "responsive/main-resp.scss";
+@import "responsive/home-resp.scss";
+@import "responsive/chart-resp.scss";
+@import "responsive/profile-resp.scss";
+@import "responsive/footer-resp.scss";
+@import "responsive/topbar-resp.scss";
+@import "responsive/game-resp.scss";
+@import "responsive/modals-resp.scss";

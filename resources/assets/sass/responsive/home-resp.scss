@@ -1,0 +1,114 @@
+@import "../utilities/variables";
+
+
+
+@media only screen and (max-width: 940px) {
+  #statsfeed-sect{
+    flex-direction: column;
+
+    #sect-bets{
+      margin-right: 0px;
+      margin-bottom: 35px;
+    }
+  }
+
+  #sect-leaders{
+    .stlst-rs1__user{
+      max-width: none;
+      padding-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #sect-landing{
+
+    #sect-landing-inner{
+      padding: 0px;
+
+      #landing-top{
+        padding: 0 25px;
+        box-sizing: border-box;
+
+      }
+
+
+      #landing-content{
+        flex-direction: column;
+
+
+        #landing-left{
+          padding: 0 25px;
+          width: 100%;
+          max-width: none;
+          flex: 1;
+          box-sizing: border-box;
+          #landing-usr{
+            margin-bottom: 20px;
+          }
+
+          #landing-left-balance{
+            margin-top: 20px;
+
+            #landing-balance-btns{
+              margin: 21px 0 16px 0;
+              max-width: 550px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            .f2_3{
+              text-align: center;
+            }
+          }
+        }
+
+        #landing-right{
+          padding: 0 25px;
+          padding-top: 16px;
+          width: 100%;
+          max-width: none;
+          flex: 1;
+          box-sizing: border-box;
+          margin-top: 20px;
+
+          .f1_h1{
+            text-align: center;
+            margin: 21px 0;
+            br{
+              display: none;
+            }
+          }
+
+          #landing-right-stats{
+            padding-bottom: 26px;
+          }
+
+          #landing-right-bckg{
+            height: 100%;
+            width: 100%;
+            min-width: none;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 470px) {
+  #landing-balance-btns{
+    flex-direction: column !important;
+    a{
+      width: 70%;
+    }
+    span{
+      margin: 8px auto;
+    }
+  }
+
+  #landing-right-stats{
+    text-align: center;
+  }
+}

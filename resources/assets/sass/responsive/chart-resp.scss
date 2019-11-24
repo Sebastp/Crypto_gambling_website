@@ -1,0 +1,86 @@
+@import "../utilities/variables";
+
+
+@media only screen and (min-width: 1075px) {
+  .chart-cont{
+    width: calc(100% + 35px);
+    left: -35px;
+  }
+}
+
+
+@media only screen and (min-width: 1140px) {
+  .chart-cont{
+    width: calc(100% + 70px);
+    left: -70px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .chart{
+    overflow-x: hidden;
+  }
+
+  .chart-cont{
+    .chart-inner{
+      height: 475px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .chart-cont{
+    .chart-inner{
+      height: 450px;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .chart-cont{
+    .chart-inner{
+      height: 425px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .chart-cont{
+    .chart-inner{
+      height: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .chart-inner-error{
+    width: 100vw;
+    min-width: 350px;
+  }
+
+
+
+  .chart{
+    width: calc(100% + 50px);
+    margin-left: -25px;
+
+    .chart-cont{
+      .x-labels-grad{
+        height: calc(100% - 36px);
+        top: 0;
+        left: 2px;
+      }
+
+      .chart-axis__x-labels{
+        width: 100%;
+        padding-top: 100%;
+        left: 6px;
+      }
+
+      .chart-right{
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}

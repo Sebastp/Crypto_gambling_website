@@ -1,0 +1,243 @@
+@import "utilities/variables";
+@import "../vendor/typography";
+
+
+$yTransitionTime: 0.6s;
+
+
+.chart-inner-error{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 97;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+
+  .error-midBox{
+    padding: 21px 30px 24px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 2;
+    text-align: center;
+
+    #error-msg{
+      display: block;
+      opacity: 1;
+      font-weight: $bold;
+      font-size: 18px;
+      color: $negative_1 !important;
+      margin-bottom: 16px;
+    }
+
+    button{
+      display: block;
+      color: $negative_1 !important;
+      margin: auto;
+      box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .errorBck{
+    height: 100%;
+    width: 100%;
+    background-color: $negative_2;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+.chart{
+  width: 100%;
+  height: auto;
+}
+
+.chart-cont{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-width: 670px;
+
+
+
+  .chart_price{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    position: absolute;
+  }
+
+  .chart-right{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 70px);
+    left: 70px;
+  }
+
+
+
+  .chart-inner{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    left: 0px;
+    transition: .4s height;
+    border-bottom: 2px solid $grey-mono_2;
+    border-left: 2px solid $grey-mono_2;
+
+
+
+    .chart-content{
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 95;
+
+      .gameLine-bet__price{
+        stroke: $main-flag;
+        opacity: 0.5;
+        stroke-width: 30px;
+      }
+
+      [chart-content]{
+        transition: $yTransitionTime;
+      }
+
+      .chart-fill_area{
+        opacity: 0.07;
+      }
+
+      .chart-upstroke{
+        fill: none;
+        stroke-width: 35;
+        stroke-linecap: round;
+      }
+    }
+  }
+
+
+  .chart-axis__x, .chart-axis__y{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    g{
+      stroke-width: 11px;
+      stroke: $grey-mono_2;
+    }
+  }
+
+  .chart-axis__y, .chart-axis__x{
+    line{
+      transition: $yTransitionTime;
+    }
+  }
+
+
+
+  .chart-axis__y-labels{
+    width: 100%;
+    height: 30px;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+
+    .y-labels-grad{
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
+    }
+
+    span{
+      display: inline-block;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 0;
+      position: absolute;
+      transition: $yTransitionTime;
+      white-space: nowrap;
+    }
+  }
+
+
+  .chart-axis__x-labels{
+    width: calc(100% - 70px);
+    padding-top: calc(100% - 70px);
+    position: absolute;
+    transform: translateY(30%);
+
+
+    span{
+      transform: translateY(-50%);
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 60px;
+      text-align: right;
+      transition: $yTransitionTime;
+    }
+  }
+
+  .x-labels-grad{
+    height: 100%;
+    width: 70px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 88%, rgba(255,255,255,1) 100%);
+  }
+
+
+  .chart-axY{
+    min-width: 680px;
+  }
+
+  .chart-a__y-rounds{
+    z-index: 94;
+    g{
+      transition: $yTransitionTime;
+    }
+    [round-start], [round-stop]{
+      stroke-width: 30px;
+      stroke-dasharray: 0px;
+      transition: stroke 0s;
+      opacity: 0.7;
+    }
+
+    [round-start]{
+      // stroke: $positive_1;
+      stroke: $main-flag;
+    }
+
+    [round-stop]{
+      // stroke: $negative_1;
+      stroke: $black-mono_0;
+    }
+  }
+
+}

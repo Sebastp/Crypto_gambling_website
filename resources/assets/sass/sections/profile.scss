@@ -1,0 +1,98 @@
+@import "../utilities/variables";
+
+.profile-cont{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-window{
+  background-color: #fff;
+  border: 1px solid $grey-mono_1;
+  padding: 0px;
+  margin: 24px auto;
+
+  .pw-top{
+    display: block;
+    width: 100%;
+    padding: 24px 0 14px 0;
+    border-bottom: 1px solid $grey-mono_1;
+  }
+
+  .pw-mid{
+    width: 100%;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 16px;
+
+    .pw-edit{
+      margin-bottom: 35px;
+    }
+
+    .pw-balance-cont{
+      text-align: center;
+      margin-bottom: 31px;
+
+      #pw-usrBalance{
+        font-size: 18px;
+        span{
+          font-size: 16px;
+          margin-right: 2px;
+        }
+      }
+
+      #pw-balance-btns{
+        text-align: center;
+        margin: 14px auto 16px auto;
+        span{
+          margin: 8px 6px;
+          color: $grey-mono_-2;
+        }
+      }
+    }
+
+    .pw-stats{
+      display: inline-block;
+      width: 100%;
+
+      .pw-stat{
+        display: inline-block;
+        white-space: nowrap;
+        margin-right: 8px;
+        margin-bottom: 10px;
+
+        span{
+          margin-right: 4px;
+        }
+
+        #pw__lastLog{
+          white-space:pre;
+        }
+
+        &:last-child{
+          margin-right: 0px;
+        }
+      }
+    }
+
+  }
+
+  .pw-down{
+    .pw-btns{
+      padding-bottom: 35px;
+      min-height: 22px;
+      float: right;
+      white-space: nowrap;
+      .pw-action__btn{
+        vertical-align: middle;
+
+        &#pw-action__neg{
+          opacity: 0.6;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

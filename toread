@@ -1,0 +1,48 @@
+//bellow in vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php
+
+    public static function uid($len, $table = null)
+    {
+      $numbers = '0123456789';
+
+      $value = '';
+
+      for ($i = 0; $i < $len; $i++) {
+          $value .= substr($numbers, rand(0, strlen($numbers) - 1), 1);
+      }
+
+      if (!empty($table)) {
+        if (self::query()->where($table, $value)->exists()) {
+          return self::uStringId($len, $table);
+        }
+      }
+      return $value;
+    }
+
+
+    public static function uStringId($len, $table = null)
+    {
+      $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      $newStrId = '';
+      for ($i = 0; $i < $len; $i++) {
+          $newStrId .= $characters[rand(0, strlen($characters)-1)];
+      }
+
+      if (!empty($table)) {
+        if (self::query()->where($table, $newStrId)->exists()) {
+          return self::uStringId($len, $table);
+        }
+      }
+      return $newStrId;
+    }
+
+    public static function shortNum($value)
+    {
+      if ($value > 999 && $value <= 999999) {
+        $result = floor($value / 1000) . ' K';
+      } elseif ($value > 999999) {
+        $result = floor($value / 1000000) . ' M';
+      } else {
+        $result = $value;
+      }
+      return $result;
+    }

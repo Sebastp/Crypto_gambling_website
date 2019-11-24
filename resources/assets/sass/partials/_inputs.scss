@@ -1,0 +1,184 @@
+@import "../utilities/variables";
+
+
+
+
+.inpt-label__float{
+  cursor: text;
+  left: 0;
+  position: absolute;
+  display: block;
+  padding: 20px 0 0 0;
+  line-height: 1em;
+
+  font-size: 18px;
+  font-family: $f1;
+  font-weight: $medium;
+  color: $grey-mono_-35;
+  transition: 0.25s padding, 0.25s font-size, 0.4s color;
+
+  &.label__float-active{
+    color: $main-flag;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 0;
+    transition: 0.3s padding, 0.3s font-size, 0.45s color;
+    &.label__float-blur{
+      color: $grey-mono_-3;
+    }
+  }
+}
+
+
+//under line
+
+.inpt-undrline-cont{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+
+  [undrline-onfcs]:focus{
+    &~ .inpt-undrline .inpt-line__fcsed{
+      width: 100%;
+      transition: 0.5s width;
+    }
+  }
+
+  [undrline-onfcs]{
+    width: 100%;
+    flex: 1;
+    margin-bottom: 2px;
+  }
+
+  .inpt-undrline{
+    width: 100%;
+    height: 2px;
+    position: relative;
+
+    .inpt-line-neutral{
+      background-color: $grey-mono_-25;
+    }
+
+    .inpt-line-positiv{
+      background-color: $main-mono_1;
+    }
+
+    .inpt-line__fcsed{
+      height: 2px;
+      width: 0;
+      position: absolute;
+      opacity: 0.5;
+      z-index: 10;
+      right: 0;
+      left: 0;
+      margin: auto;
+      transition: 0.2s width;
+    }
+
+    .inpt-line__unfcsed{
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background-color: $grey-mono_1;
+      opacity: 0.7;
+    }
+
+    .inpt-line-negative{
+      background-color: $negative_0;
+      z-index: 1;
+      display: none;
+    }
+  }
+
+}
+
+
+
+
+//checkbox
+
+.chckbx__lable-cont{
+  cursor: pointer;
+  display: flex;
+}
+
+.inpt-chckbx__flat {
+	width: 19px;
+	height: 19px;
+	background: none;
+	position: relative;
+
+  .chckbx__flat__inpt{
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+
+.inpt-chckbx__flat .chckbx__cont {
+  cursor: pointer;
+	position: absolute;
+  width: 100%;
+	height: 100%;
+  border: 2px solid $grey-mono_1;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+
+
+  .chckbx__checkmark{
+    position: absolute;
+    height: 10px;
+    width: 5px;
+    background: none;
+    border: 2px solid transparent;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &:hover{
+    transition: border-color 0.4s;
+    border-color: $grey-mono_-4;
+  }
+}
+
+.inpt-chckbx__flat .chckbx__cont:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  border-radius: 4px;
+}
+
+
+.inpt-chckbx__flat input[type=checkbox]{
+  &:checked{
+    &+ label {
+      .chckbx__cont{
+        background-color: $main-mono_1;
+        border-color: $main-mono_1;
+      }
+
+      .chckbx__checkmark{
+        // border-color: $main-mono_-1;
+        border-color: #fff;
+      }
+    }
+  }
+
+  &:focus{
+    &+ label {
+      .chckbx__cont{
+        // border: 2px solid $main-mono_-3;
+        border-color: $main-mono_2;
+      }
+    }
+  }
+}

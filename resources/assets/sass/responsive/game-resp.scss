@@ -1,0 +1,77 @@
+@import "../utilities/variables";
+
+
+@media only screen and (max-width: 701px) {
+  #sect-game{
+    #game-bet{
+      flex-direction: column;
+
+      #bet-left{
+        width: 100%;
+        padding-right: 0px;
+        border-bottom: 1px solid $grey-mono_2;
+        border-right: none;
+
+        #bet-mid{
+          margin: 20px 5% !important;
+        }
+      }
+
+      #bet-right{
+        width: 100%;
+        padding-top: 5px;
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  .game-topBetAlert{
+    .topBetAlert-inner{
+      .topBetAlert-mid{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .stlst-rs1__payout{
+      display: none !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .game-topBetAlert{
+    .topBetAlert-inner{
+      .topBetAlert-mainMsg{
+        display: none;
+      }
+    }
+  }
+
+  .stlst-rs1__time{
+    display: none !important;
+  }
+
+  .stlst-rs1__return{
+    min-width: 100px !important;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .stlst-rs2__user{
+    min-width: 80px !important;
+  }
+
+  .game-topBetAlert{
+    top: 50px;
+  }
+}

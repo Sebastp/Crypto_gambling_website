@@ -1,0 +1,85 @@
+@import "../utilities/variables";
+$minVW: 350px;
+
+
+@media only screen and (max-width: 1415px) {
+  .container__0{
+    max-width: 1090px;
+
+    .profile-hor-grid{
+      .profile-grid-itm{
+        width: 218px;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1140px) {
+  .container__0{
+    max-width: 815px;
+
+    &.grid-c0weh0{
+      .writing-elem_half{
+        width: 402px;
+      }
+    }
+
+    .profile-hor-grid{
+      .profile-grid-itm{
+        width: 203px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 865px) {
+  .container__0{
+    box-sizing: border-box;
+
+    &.grid-c0weh0{
+      .writing-elem_half{
+        width: 100%
+      }
+    }
+
+    .profile-hor-grid{
+      max-height: 188px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .profile-grid-itm{
+        width: 203px;
+      }
+    }
+
+    .pop-li__profile{
+      width: calc(50% - 10px) !important;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .full-onmobile{
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container__1{
+    padding: 0 16px;
+  }
+}
+
+
+@media only screen and (max-width: 350px) {
+  .topbar{
+    min-width: $minVW;
+  }
+
+  body{
+    min-width: $minVW;
+    overflow-x: scroll;
+  }
+}
